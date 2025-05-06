@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>color filler</title>
+</head>
+<style>
+	h1{
+		font-size: 40px;
+		margin: 20px;
+	}
+	button{
+		font-size: 20px;
+		padding: 12px;
+		margin: 20px;
+		border-radius: 12px;
+		width: 10%;
+		color: white;
+		border:1px solid white;
+	}
+	#reds{
+		background-color: red;
+	}
+	#blues{
+		background-color: blue;
+	}
+	#greens{
+		background-color: green;
+	}
+	#randoms{
+		color: black;
+		border: 1px solid black;
+	}
+</style>
+<body>
+<h1>Color Filler</h1>	
+<button id="reds" onclick="setred()">Red</button>
+<button id="blues" onclick="setblue()">Blue</button>
+<button id="greens" onclick="setgreen()">Green</button>
+<button id="randoms" onclick="random()">Random</button>
+</body>
+<script>
+ 
+function setred() {
+	// body...
+	document.body.style.backgroundColor = "red";
+}
+function setblue(){
+	document.body.style.backgroundColor="blue";
+}
+function setgreen(){
+	document.body.style.backgroundColor="green";
+}
+function random(){
+	const red= Math.round(Math.random()*255);
+	const green=Math.round(Math.random()*255);
+	const blue=Math.round(Math.random()*255);
+
+	const color=`rgb(${red},${green},${blue})`;
+	  const body = document.querySelector('body');
+	body.style.backgroundColor=color;
+}
+</script>
+</html>
